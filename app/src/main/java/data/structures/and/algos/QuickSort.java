@@ -11,7 +11,7 @@ public class QuickSort {
             return integerList;
         }
         quickSort(integerList, 0, integerList.size() - 1);
-        System.out.println(integerList);
+//        System.out.println(integerList);
         return integerList;
     }
 
