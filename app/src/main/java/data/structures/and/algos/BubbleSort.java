@@ -1,20 +1,22 @@
 package data.structures.and.algos;
 
 public class BubbleSort {
-    public static void bubbleSort(int[] numbers) {
-        if (numbers.length < 2) {
+    public static void bubbleSort(int[] array) {
+        if (array.length < 2) {
             return;
         }
 
         boolean isSorted = false;
+        int lastUnsorted = array.length - 1;
         while (!isSorted) {
             isSorted = true;
-            for (int i = 0; i < numbers.length - 1; i++) {
-                if (numbers[i] > numbers[i + 1]) {
-                    swap(numbers, i, i+1);
+            for (int i = 0; i < lastUnsorted; i++) {
+                if (array[i] > array[i + 1]) {
+                    swap(array, i, i+1);
                     isSorted = false;
                 }
             }
+            lastUnsorted--;
         }
     }
 
